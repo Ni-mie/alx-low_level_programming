@@ -21,8 +21,12 @@ int main(void)
 			{
 				putchar(first_digit + 48);
 				putchar(second_digit + 48);
+
+				if (first_digit + second_digit != 17)
+				{
 				putchar(',');
 				putchar(' ');
+				}
 			}
 			second_digit++;
 		}
