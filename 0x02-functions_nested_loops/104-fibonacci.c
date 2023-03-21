@@ -15,7 +15,7 @@ int main(void)
 	for (i = 3; i <= 98; i++)
 	{
 		sum = a + b;
-		if (i != 98)
+		if (i <= 86)
 		{
 		printf(",");
 		printf(" ");
