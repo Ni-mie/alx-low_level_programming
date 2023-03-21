@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	float grand_sum;
+	float grand_sum = 2;
 	unsigned long a = 1, b = 2, sum;
 
 	while (1)
