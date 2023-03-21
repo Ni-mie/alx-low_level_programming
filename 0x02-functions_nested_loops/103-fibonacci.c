@@ -14,10 +14,11 @@ int main(void)
 	{
 		sum = a + b;
 
-		if ((sum % 2 == 0) && (sum > 4000000))
-		{
+		if (sum > 4000000)
+			break;
+
+		if ((sum % 2) == 0)
 			grand_sum += sum;
-		}
 
 		a = b;
 		b = sum;
