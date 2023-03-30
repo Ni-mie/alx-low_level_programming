@@ -32,7 +32,7 @@ void print_buffer(char *b, int size)
 		else
 			printf("   ");
 	}
-	
+
 	for (j = i; j < i + 10; j++)
 	{
 		if (j < size)
