@@ -14,7 +14,8 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * _sqrt - Function that returns the natural square root of a number.
+ * real_sqrt - Function that returns the natural square root of a number.
+ * @j: integer
  * @n: integer
  * Return: Always 0 (Success)
  */
