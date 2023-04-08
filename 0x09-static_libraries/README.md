@@ -1,0 +1,2 @@
+# TASKS
+**Static Libraries**
