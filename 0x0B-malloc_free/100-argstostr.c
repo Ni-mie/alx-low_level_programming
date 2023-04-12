@@ -38,10 +38,12 @@ char *argstostr(int ac, char **av)
 			len++;
 			i++;
 		}
-		concat[i] = '\n';
-		i++;
+		if (concat[i] == '\0')
+		{
+			concat[i] = '\n';
+			i++;
+		}
 	}
 
-	concat[i] = '\0';
 	return (concat);
 }
