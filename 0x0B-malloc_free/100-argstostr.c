@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 		total += len + 1;
 	}
 
-	concat = (char *) malloc(sizeof(char) * total);
+	concat = (char *) malloc(sizeof(char) * total + 1);
 
 	if (concat == NULL)
 		return (NULL);
@@ -38,12 +38,10 @@ char *argstostr(int ac, char **av)
 			len++;
 			i++;
 		}
-		if (concat[i] == '\0')
-		{
-			concat[i] = '\n';
-			i++;
-		}
+		concat[i] = '\n';
+		i++;
 	}
 
+	concat[i] = '\0';
 	return (concat);
 }
