@@ -17,6 +17,7 @@ char *argstostr(int ac, char **av)
 	for (j = 0; j < ac; j++)
 	{
 		int len = 0;
+
 		while (av[j][len])
 			len++;
 		total += len + 1;
@@ -30,6 +31,7 @@ char *argstostr(int ac, char **av)
 	for (j = 0; j < ac; j++)
 	{
 		int len = 0;
+
 		while (av[j][len])
 		{
 			concat[i] = av[j][len];
