@@ -8,7 +8,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, n1;
+	unsigned int len1, len2, i, j;
 	char *concat;
 
 	if (s1 == NULL)
@@ -19,23 +19,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 
-	if (n >= len2)
-		n1 = len1 + len2;
-	else
-		n1 = len1 + n;
+	if (n < len2)
+		len2 = n;
 
-	concat = (char *) malloc(sizeof(char) * (n1 + 1));
+	concat = (char *) malloc(sizeof(char) * (len1 + len2  + 1));
 
 	if (concat == NULL)
 		return (NULL);
 
-	strncpy(concat, s1, len1);
-	if (n < len2)
-		strncat(concat, s2, n);
-	else
-		strncat(concat, s2, len2);
+	for (i = 0; i < len1; i++)
+	{
+		concat[i] = s1[i];
+	}
+	for (j = 0; j < len2; j++, i++)
+	{
+		concat[i] = s2[j];
+	}
 
-	concat[n1] = '\0';
+	concat[i] = '\0';
 
 	return (concat);
 }
