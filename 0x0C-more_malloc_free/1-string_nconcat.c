@@ -20,14 +20,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len2 = strlen(s2);
 
 	if (n >= len2)
-		n = len2;
+		n = len1 + len2;
+	else
+		n = len1 + n;
 
-	concat = (char *) malloc(sizeof(char) * (len1 + n + 1));
+	concat = (char *) malloc(sizeof(char) * (n + 1));
+
 	if (concat == NULL)
 		return (NULL);
 
 	strncpy(concat, s1, len1);
 	strncat(concat, s2, n);
+
 	concat[len1 + n] = '\0';
 
 	return (concat);
