@@ -1,7 +1,7 @@
 #include "dog.h"
 
 /**
- * init_dog - Function that concatenates two strings.
+ * init_dog - Function that initialize a variable of type struct dog.
  * @d: Pointer
  * @name: Name
  * @age: Age
